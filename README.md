@@ -15,3 +15,5 @@ In recent versions of Solidity, we use `view` instead of `constant` ([The `const
 ![diagrams-19 - calls drawio](https://user-images.githubusercontent.com/26703184/169011709-5dae589e-7874-4848-aa94-a810fbed10f7.png)
 
 If we call a function that modifies contract's data, we send a transaction to the function. It takes time to execute (just like any other transaction), and it returns the transaction hash. A function that modifies the contract's data (for example `setMessage` in our case) cannot return data. We always get the transaction hash (ID) as return data.
+
+If we call a `view` function, which is just reading and returning contract's data, it runs instantly (it's not a transaction) as we only read data in the blockchain. And it's free.
