@@ -4,6 +4,7 @@ contract Inbox { // Defines a new contract, that will have some number of method
 
     // Declares all of the instance variables (and their types) that will exist in this contract
 
+    // This property is declared as public -> A function with the same name will be automatically created at contract deployment to get its value
     string public message;
 
     // Defines different functions that will be members of this contract
@@ -17,6 +18,7 @@ contract Inbox { // Defines a new contract, that will have some number of method
         message = newMessage;
     }
 
+    // As the message property is defined as public, this function is redundant
     function getMessage() public view returns (string) {
         return message;
     }
