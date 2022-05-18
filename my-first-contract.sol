@@ -8,6 +8,7 @@ contract Inbox { // Defines a new contract, that will have some number of method
 
     // Defines different functions that will be members of this contract
 
+    // This function has the same name as the contract name, it's the constructor function. It's automatically called one time when the contract is first created
     function Inbox(string initialMessage) public {
         message = initialMessage;
     }
